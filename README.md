@@ -1,4 +1,9 @@
 
+## 参考
+- [Redux入門(Qiita)](https://qiita.com/kiita312/items/b001839150ab04a6a427)
+- [ReactのプロジェクトにReduxを導入する。](https://qiita.com/gcmae/items/e85abecd999257c2ca8c)
+- [「react-redux」についてconnectの実装パターンを試す](https://qiita.com/MegaBlackLabel/items/df868e734d199071b883)
+
 ## 導入
 ### getting started
 - reactアプリを作成する
