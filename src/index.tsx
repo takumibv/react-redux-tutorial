@@ -7,12 +7,12 @@ import App from './containers/App';
 import reducer from './reducers/reducer'
 
 import './index.css';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducer)
 
 render(
-	<Provider store={store}> 
+	<Provider store={store}>
     	<App />
   	</Provider>, 
 	document.getElementById('root'));

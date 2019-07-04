@@ -1,10 +1,9 @@
-import React, { Component, PropTypes } from 'react';
-import VisibleTodoList from '../containers/VisibleTodoList'
-import TodoList from '../components/TodoList'
-import GameBoard from './GameBoard'
-import Header from '../components/Header';
+import React, { Component } from 'react';
+// import VisibleTodoList from '../containers/VisibleTodoList'
+// import TodoList from '../components/TodoList'
+// import GameBoard from './GameBoard'
 
-class App extends Component {
+class Board extends Component {
   render() {
     return (
       <div className="App">
@@ -16,11 +15,10 @@ class App extends Component {
         </p>
         <TodoList />
         <GameBoard /> */}
-        <Header />
-        <GameBoard />
+        <div></div>
       </div>
     );
   }
 }
 
-export default App;
+export default Board;

@@ -5,8 +5,9 @@ class GameBoard extends Component {
     return (
       <div id="GameBoard">
         <p className="App-intro">
-          わあああ
+          ボード
         </p>
+        <button>ゲームスタート</button>
       </div>
     );
   }
