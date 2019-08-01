@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import VisibleTodoList from '../containers/VisibleTodoList'
-import TodoList from '../components/TodoList'
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+// import VisibleTodoList from './VisibleTodoList'
+// import TodoList from '../components/TodoList'
 import GameBoard from './GameBoard'
 import Header from '../components/Header';
 
@@ -23,4 +24,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({
+  state
+});
+
+export default connect(
+  mapStateToProps
+)(App);
