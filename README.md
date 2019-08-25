@@ -151,3 +151,19 @@ $ yarn add typescript @types/node @types/react @types/react-dom @types/jest @typ
 ```bash
 $ yarn start
 ```
+
+## scss導入
+
+- [node-sass](https://github.com/sass/node-sass)
+
+```bash
+$ yarn add node-sass
+```
+
+- `src/index.tsx`に以下を加える
+
+```js
+import './scss/index.scss';
+```
+
+- 終わり

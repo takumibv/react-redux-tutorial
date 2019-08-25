@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as Game_actions from '../actions/game_actions'; 
 import { WAITING, END, START } from '../reducers/game';
 import { Map } from 'immutable';
+import Board from '../components/Board';
 
 interface State {
   is_started: boolean;
@@ -12,6 +13,7 @@ interface State {
 interface Props {
   game_actions: typeof Game_actions;
   game: Map<string, any>;
+  game_board: Map<string, any>;
 }
 
 class GameBoard extends Component<Props, State> {
@@ -48,10 +50,12 @@ class GameBoard extends Component<Props, State> {
 
   render() {
     // const { is_started } = this.state;
-    const { game } = this.props;
+    const { game, game_board } = this.props;
     const is_waiting = game.get('game_status') === WAITING;
     const is_started = game.get('game_status') === START;
     const is_end = game.get('game_status') === END;
+
+    console.log("======", game_board.toJS());
 
     return (
       <div id="GameBoard" className="uk-container">
@@ -82,6 +86,9 @@ class GameBoard extends Component<Props, State> {
             </button>
           </div>
         )}
+        <Board
+          game_board={game_board}
+        />
         <div className="uk-animation-toggle">
             <div className="uk-card uk-card-default uk-card-body uk-animation-fade">
                 <p className="uk-text-center">Fade</p>
@@ -94,6 +101,7 @@ class GameBoard extends Component<Props, State> {
 
 const mapStateToProps = (state: any) => ({
   game: state.game,
+  game_board: state.game_board,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => {

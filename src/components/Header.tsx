@@ -4,15 +4,11 @@ interface HeaderProps {
 
 }
 
-interface State {
-    
-}
-
-export default class extends Component<State, HeaderProps> {
+export default class extends Component<HeaderProps> {
     render() {
         return (
         <div id="header">
-            <h2>header</h2>
+            <h1>header</h1>
         </div>
         );
     }

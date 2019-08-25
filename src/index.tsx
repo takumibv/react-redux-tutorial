@@ -1,20 +1,21 @@
 
 import React from 'react';
 import { render } from 'react-dom'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import thunk from 'redux-thunk';
 import App from './containers/App';
 import reducer from './reducers/index'
 
-import './index.css';
-import './scss/test.scss';
+import './scss/reset.scss';
+import './scss/index.scss';
 // import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(reducer)
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(reducer);
 
 render(
 	<Provider store={store}>
 		<App />
 	</Provider>, 
 	document.getElementById('root'));
-// registerServiceWorker();

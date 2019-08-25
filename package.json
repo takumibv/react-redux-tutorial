@@ -17,12 +17,13 @@
     "react-redux": "^5.0.6",
     "react-scripts": "3.0.1",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.3.0",
     "sass": "^1.22.7",
     "typescript": "^3.5.2",
     "typescript-eslint-parser": "^22.0.0"
   },
   "scripts": {
-    "watch": "react-scripts start && sass --watch src/scss/test.scss build/test.css",
+    "watch": "react-scripts start && sass --watch src/scss/*.scss build/css/*.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
